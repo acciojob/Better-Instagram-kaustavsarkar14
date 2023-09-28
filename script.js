@@ -4,7 +4,7 @@ divs.forEach(div=>{
 	div.addEventListener('dragstart',(e)=>{
 		e.dataTransfer.setData('id', e.target.id)
 	})
-})
+}) 
 divs.forEach(div=>{
 	div.addEventListener('dragover',(e)=>{
 		e.preventDefault()
@@ -16,6 +16,7 @@ divs.forEach(div=>{
 		div.id = tid
 		let temp = div.innerText
 		div.innerText  = drag.innerText
-		drag.innertext = temp
+		drag.innerText = temp
+		console.log(div.innerText, drag.innerText, temp)
 	})
 })
